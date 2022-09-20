@@ -1,0 +1,26 @@
+//getting all quotes
+
+GET http://localhost:3030/quotes
+
+######
+
+//creating a quote
+
+POST http://localhost:3030/quotes
+content-Type: application/json
+
+{
+    "content" : "You should have gone for the head",
+    "author" : "Thanos, the great titan"
+}
+
+#######
+//getting one quote
+
+GET  http://localhost:3030/quotes/  //id
+
+####
+
+//deleting a quote
+
+DELETE http://localhost:3030/quotes/   //id
