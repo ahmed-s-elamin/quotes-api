@@ -32,6 +32,22 @@ router.post("/", async (req, res) => {
   }
 });
 
+//updating a quote
+router.patch("/:id", getQ, async (req, res) => {
+  if (req.body.content != null) {
+    res.quote.content = req.body.content;
+  }
+  if (req.body.author != null) {
+    res.quote.author = req.body.author;
+  }
+  try {
+    const updatedQuote = await res.quote.save();
+    res.json(updatedQuote);
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+});
+
 //deleting a quote
 router.delete("/:id", getQ, async (req, res) => {
   try {

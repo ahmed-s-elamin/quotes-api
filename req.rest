@@ -15,6 +15,17 @@ content-Type: application/json
 }
 
 #######
+//updating a quote
+
+PATCH  http://localhost:3030/quotes/632987ba1cef8f2a19ed2fd1
+content-Type: application/json
+
+{
+    "content" : "With great powers, comes great responsibility.",
+    "author" : "Uncle Ben"
+}
+
+#######
 //getting one quote
 
 GET  http://localhost:3030/quotes/  //id
