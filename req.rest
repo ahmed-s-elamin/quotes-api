@@ -1,37 +1,36 @@
 //getting all quotes
 
-GET http://localhost:3030/quotes
+GET http://localhost:3030/
 
 ######
 
 //creating a quote
 
-POST http://localhost:3030/quotes
+POST http://localhost:3030/
 content-Type: application/json
 
 {
-    "content" : "You should have gone for the head",
-    "author" : "Thanos, the great titan"
+    "content" : "sup fam!!",
+    "author" : " Ahmed"
 }
 
 #######
 //updating a quote
 
-PATCH  http://localhost:3030/quotes/632987ba1cef8f2a19ed2fd1
+PATCH  http://localhost:3030/ id
 content-Type: application/json
 
 {
-    "content" : "With great powers, comes great responsibility.",
-    "author" : "Uncle Ben"
+    "author" : "old guy in spiderman"
 }
 
 #######
-//getting one quote
+//getting a single quote
 
-GET  http://localhost:3030/quotes/  //id
+GET  http://localhost:3030/ id
 
 ####
 
 //deleting a quote
 
-DELETE http://localhost:3030/quotes/   //id
+DELETE http://localhost:3030/ id
