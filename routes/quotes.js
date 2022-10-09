@@ -58,7 +58,7 @@ router.delete("/:id", getQ, async (req, res) => {
   }
 });
 
-//a middleware
+// middleware
 async function getQ(req, res, next) {
   let quote;
   try {
